@@ -21,7 +21,7 @@ query{
     subTitulo
   }
 }`;
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await request({
     query: HOMEPAGE_QUERY,
     variables: { limit: 10 }
