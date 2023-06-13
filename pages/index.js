@@ -12,7 +12,28 @@ import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
 
-const Home = () => {
+import { request } from "../lib/datocms";
+const HOMEPAGE_QUERY = `
+
+query{
+  allNovacotacaos {
+    titulo
+    subTitulo
+  }
+}`;
+export async function getStaticProps() {
+  const data = await request({
+    query: HOMEPAGE_QUERY,
+    variables: { limit: 10 }
+  });
+  return {
+    props: { data }
+  };
+}
+
+const Home = ({data}) => {
+  const hero = data.allNovacotacaos[0]
+  console.log(data);
   return (
     <>
       <Head>
@@ -25,7 +46,7 @@ const Home = () => {
       </Head>
 
       <Navbar />
-      <Hero />
+      <Hero data={hero} />
       <SectionTitle
         pretitle="Principais benefícios"
         title="Por que escolher o Painel do Corretor?"

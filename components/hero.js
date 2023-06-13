@@ -4,21 +4,20 @@ import heroImg from "../public/img/hero.png";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 
-const Hero = () => {
+const Hero = ({data}) => {
   return (
     <div className="flex flex-col min-h-[calc(100dvh-150px)]">
       <Container className="flex flex-wrap flex-1">
         <div className="flex items-center w-full lg:w-1/2">
           <AnimationOnScroll animateIn="animate__fadeInLeft">
             <div className="max-w-2xl mb-8">
-              <h1 className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
-                Multicálculo <span className="text-indigo-600">moderno</span> e
-                intuitivo
+              <h1 className="text-4xl font-bold bg-red-100 p-4 leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white">
+               {/* Multicálculo <span className="text-indigo-600">moderno</span> e */}
+               {data.titulo}
+               
               </h1>
               <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300 pr-4">
-                Apresentamos um novo formato de cotação, pensado para facilitar
-                o entendimento de cada informação. Encante seus clientes com
-                apresentações acessíveis e sem burocracia.
+                {data.subTitulo}
               </p>
 
               <div className="flex flex-col hover:opacity-95 transition-opacity items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
