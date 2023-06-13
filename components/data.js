@@ -16,18 +16,18 @@ const benefitOne = {
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
+      title: "Cotação autoexplicativa",
+      desc: "Você não precisa perder tempo tentando explicar o que significa cada informação.",
       icon: <FaceSmileIcon />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
+      title: "Ganho de tempo",
+      desc: "Com clientes mais bem informados, você ganha tempo para focar no que realmente importa.",
       icon: <ChartBarSquareIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
+      title: "Design moderno",
+      desc: "Conquiste seus clientes com apresentações elegantes e encantadoras.",
       icon: <CursorArrowRaysIcon />,
     },
   ],
@@ -56,5 +56,4 @@ const benefitTwo = {
   ],
 };
 
-
-export {benefitOne, benefitTwo};
+export { benefitOne, benefitTwo };
